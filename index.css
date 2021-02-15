@@ -27,14 +27,14 @@
     padding-top: 102px;
   }
 
-/* #body{
+#bodycontent{
     border: 0px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-} */
+}
 .toplink{
-    font-family: 'Newsreader', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     color: white;
     margin: 5px;
 }
