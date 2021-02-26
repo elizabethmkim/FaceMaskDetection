@@ -15,7 +15,7 @@
 }
 
 #middle{
-    background-image: url("/gif.gif");
+    background-image: url("gif.gif");
     background-size:100%;
     background-repeat: no-repeat;
     background-clip: border-box;
