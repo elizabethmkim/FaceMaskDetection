@@ -8,6 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Josefin+Sans:wght@300&family=Montserrat&family=Newsreader&display=swap" rel="stylesheet">
+        
     </head>
 
 
@@ -35,14 +36,30 @@
         
 
         <div class = 'content'> 
-            <div id = 'demo'>
-                <h1>Interactive Demo Here </h1>
-                <p> This demo will allow users to input an image and whether they are wearing it correctly, incorrectly, or not at all will show.</p>
-            </div> 
+        
+                <div class="container">
+                    <div class = 'row'> 
+                        <div class = 'col col-sm-0 col-md-0 col-lg-2'> </div>
+                        <div id = 'middle' class = 'col col-sm-12 col-md-12 col-lg-8'> 
+                            <h1 class = 'j1' id="display-4">Demo</h1>
+                            <p class = 'j1' id="lead">This is our demo</p>
+                            <hr>
+                            <p class = 'j1'>Are you wearing your face mask correctly?</p>
+                            
+                            <a id = 'button1' class="btn btn-primary btn-lg" href="#" role="button">Enter Demo</a>
+  
+                        </div>
+                        <div class = 'col col-sm-0 col-md-0 col-lg-2'> </div>
+                </div>
+            </div>
             
             <div id = 'bodycontent'> 
+            
                 <div id = 'left'> 
                     <div id = 'introduction'> 
+                        <br>
+                        <br>
+                        <br>
                         <h2> Introduction to our Face Mask Detection </h2>
                         <p> Introduction paragraph, information, background information about coronavirus + coronavirus statistics/visualizations</p>
                     </div>
@@ -91,6 +108,7 @@
         </div>
 
         <script src = "index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
     </body>
 </html>

@@ -7,16 +7,43 @@
 .toplink{
     float: right;
 }
-
-#demo{
-
-    margin: auto; 
+.container{
+    
     text-align: center;
-    height: 400px;
+    
+    
 }
+
+#middle{
+    background-image: url("../gif.gif");
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    padding-top:12%;
+    padding-bottom: 20%;
+    
+
+}
+
+#button1{
+    background-color: #4472CA
+}
+
+#button1:hover{
+    background-color: #48A9a6
+}
+
 *{
-    background-color: #021526;
-}
+    /* background-color: #2f323A; */
+    /* background-color: #021526;  */
+    background-color: black;
+ } 
+
+ .j1{
+     background-color: transparent;
+ }
+
+hr{ color: white}
 .sticky {
     position: fixed;
     top: 0;
@@ -33,8 +60,9 @@
     justify-content: space-evenly;
     flex-direction: row;
 }
+
 .toplink{
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
     color: white;
     margin: 5px;
 }
@@ -47,11 +75,16 @@
 }
 
 h1, h2, h3{
-    font-family: 'Newsreader', serif;
+    /* font-family: 'Newsreader', serif; */
     color: white;
 }
 
 p{
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif; */
     color: white;
+}
+
+.row .col{
+    background-color: black;
+ 
 }
