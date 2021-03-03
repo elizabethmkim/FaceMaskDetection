@@ -29,7 +29,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#context">Background</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#approach">Our Approach</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#results">Results</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#results">Results and Discussion</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
@@ -109,24 +109,45 @@
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Coronavirus</h4>
+                                    <h2 class="text-white">Coronavirus</h2>
                                     <p class="mb-0 text-white-50">  As of early February, Coronavirus (known as Covid-19) has infected over 100 million individuals throughout the world, and has killed over 2.5 million, nearly 500,000 of those being Americans. According to the CDC, Covid-19 spreads most commonly through close contact, primarily when individuals with COVID-19 “cough, sneeze, sing, talk, or breathe” as the virus is transmitted through respiratory droplets. Moreover, these viruses may infect others not in close contact through airborne transmission.  According to John Brooks, a medical epidemiologist at the CDC in Atlanta, “masks bring down the community viral load and are used to protect others, rather than oneself. Masks are imperative to helping prevent the spread of coronavirus; however, they must also be worn properly. </p>
+                                    <iframe id = "cgraph" src="https://ourworldindata.org/grapher/cumulative-deaths-and-cases-covid-19?tab=chart&stackMode=absolute&time=2020-01-22..latest&region=World" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+  
+                        <div class="featured-text text-center text-lg-left" id = 'approach'>
+                            <h2>Our Approach</h2>
+                            <br> 
+                            <h3> The Dataset</h3>
+                            <p class="text-black-50 mb-0"> A subsection of the MaskedFace-Net dataset was utilized in order to train our model. The dataset was created from the Flickr-Face-HQ dataset, and 
+                                has a medical blue face mask photoshopped onto various individuals, making it an artificially created dataset.  The dataset itself is a cumulation
+                                of 58,582 images of properly masked faces, improperly masked faces, and unmasked faces. Of the improperly masked faces, they are further split into three categories: 
+                                masks where the Mouth and Chin were covered properly, the Nose and Mouth were covered properly, and only the chin was covered properly. For a face mask 
+                                to be considered properly worn, the mask must cover the nose, chin, and mouth.
 
-                    <div class="col-xl-8 col-lg-7">
-                        <!-- <img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="" /></div> -->
-                    <div class="col-xl-4 col-lg-5">
-                        <div class="featured-text text-center text-lg-left">
-                            <h4>Our Approach</h4>
-                            <p class="text-black-50 mb-0">our approach</p>
+                                More information on the dataset is available here. </p>
+                            <br> 
+                            <h3> The Model </h3>
+                            <p class="text-black-50 mb-0"> The model architecture used was the Inception Resnet V1, which ia a variance of the original FaceNet Model. We utilized an untrained model on three classes" improperly
+                                worn, properly worn, and no mask at all. In terms of image processing, the images were resized to 256 x 256, and transformed into tensors; Inception ResNet V1 works best 
+                                with images that are cropped to the face; as our dataset had a pre-cropped image of faces already, this did not prove to be an issue. However, the model performance may change due to this. More information 
+                                on this can be found in our discussion section below. 
+                                Ultimately, our model received an accuracy of 0.96. 
+                            </p>
+                            <br> 
+                            <h3> GradCAM </h3>
+                            <p class="text-black-50 mb-0"> GradCAM, or Gradient weighted Class Activation Mapping was utilized in order to provide transparency. GradCam utilizes gradient information from the last convolutional layer of our CNN and ultimately results in a coarse heat map. 
+                                Essentially, GradCAM provides insight on where our model is looking specifically to make the decisions that is makes. Sample images of GradCAM outputs on several of the dataset images are shown below. 
+                                
+                            </p>
                         </div>
                     </div>
-                </div>
-                </div>
+         
+ 
 
                 <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -168,21 +189,22 @@
                   </div> -->
 
                 <!-- Project Two Row-->
-                <div class="row justify-content-center no-gutters">
-                    <div class="col-lg-6">
-                        <!-- <img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="" /></div> -->
-                    <div class="col-lg-6 order-lg-first">
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                    <!-- <div class="col-lg-6">
+                        <img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
+                    <div class="col-lg-6"> -->
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Results</h4>
-                                    <p class="mb-0 text-white-50">The results of our thing, The results of our thingThe results of our thingThe results of our thingThe results of our thingThe results of our thingThe results of our thingThe results of our thing</p>
-                                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h2 class="text-white">Our Results and Discussion</h2>
+                                    <p class="mb-0 text-white-50">  As of early February, Coronavirus (known as Covid-19) has infected over 100 million individuals throughout the world, and has killed over 2.5 million, nearly 500,000 of those being Americans. According to the CDC, Covid-19 spreads most commonly through close contact, primarily when individuals with COVID-19 “cough, sneeze, sing, talk, or breathe” as the virus is transmitted through respiratory droplets. Moreover, these viruses may infect others not in close contact through airborne transmission.  According to John Brooks, a medical epidemiologist at the CDC in Atlanta, “masks bring down the community viral load and are used to protect others, rather than oneself. Masks are imperative to helping prevent the spread of coronavirus; however, they must also be worn properly. </p>
+                                   
+                                    <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    
             </div>
         </section>
         <!-- Signup-->
