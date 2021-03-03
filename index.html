@@ -7,14 +7,17 @@
         <meta name="author" content="" />
         <title>Explainable AI</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        
         <!-- Font Awesome icons (free version)-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -146,50 +149,140 @@
                             </p>
                         </div>
                     </div>
-         
+
+                    <!-- Carousel wrapper -->
+                    
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+                    <!--Carousel Wrapper-->
+            
+                    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+            
+                <!--Controls-->
+                <div class="controls-top" id = 'cchome'>
+                  <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left" id = "ccpointer"></i></a>
+                  <a class="btn-floating" href="#multi-item-example" data-slide="next" ><i
+                      class="fas fa-chevron-right" id = "ccpointer" ></i></a>
+                </div>
+                <!--/.Controls-->
+              
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                  <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                  <li data-target="#multi-item-example" data-slide-to="1"></li>
+                  
+                </ol>
+                <!--/.Indicators-->
+              
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox" id = 'ccdiv'>
+                    <br>
+                    
+              
+                  <!--First slide-->
+                  <div class="carousel-item active">
+              
+                    <div class="col-md-4" style="float:left">
+                     <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="download-1.png" alt="Chin covered">
+                        <div class="card-body">
+                          <h4 class="card-title">Original Photo</h4>
+                          <p class="card-text"> Improper mask usage - only their chin is covered in the image.</p>
+                          <!-- <a class="btn btn-primary">Button</a> -->
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4" style="float:left">
+                        <div class="card mb-2">
+                          <img class="card-img-top"
+                            src="chingrad2.jpg" alt="Card image cap">
+                          <div class="card-body">
+                            <h4 class="card-title">GradCAM Output</h4>
+                            <p class="card-text"> GradCAM output - where was our model looking to reach a conclusion?</p>
+                            <!-- <a class="btn btn-primary">Button</a> -->
+                          </div>
+                        </div>
+                      </div>
+              
+                    <div class="col-md-4" style="float:left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="chingrad1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Final HeatMap</h4>
+                          <p class="card-text"> The GradCAM output as a heatmap, overlayed onto the original photo.</p>
+                          <!-- <a class="btn btn-primary">Button</a> -->
+                        </div>
+                      </div>
+                    </div>
+              
+ 
+                    
+
+              
+                  </div>
+                  <!--/.First slide-->
+              
+                  <!--Second slide-->
+                  <div class="carousel-item">
+              
+                    <div class="col-md-4" style="float:left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="download.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">Original Photo</h4>
+                          <p class="card-text"> Proper Mask Usage - the chin, nose, and mouth are covered.</p>
+                          <!-- <a class="btn btn-primary">Button</a> -->
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="col-md-4" style="float:left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="covered2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title">GradCam Output</h4>
+                          <p class="card-text"> GradCAM output - where was our model looking to reach a conclusion?</p>
+                          <!-- <a class="btn btn-primary">Button</a> -->
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="col-md-4" style="float:left">
+                      <div class="card mb-2">
+                        <img class="card-img-top"
+                          src="covered1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h4 class="card-title"> Final Heatmap </h4>
+                          <p class="card-text">The GradCAM output as a heatmap, overlayed onto the original photo.</p>
+                          <!-- <a class="btn btn-primary">Button</a> -->
+                        </div>
+                      </div>
+                    </div>
+                    
+
+              
+                  </div>
+                  <!--/.Second slide-->
+              
+                 
+              
+                </div>
+                <!--/.Slides-->
+              
+              </div>
  
 
-                <!-- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="/download-1.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>First slide label</h5>
-                          <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/download-2.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>Second slide label</h5>
-                          <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="/download-3.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>Third slide label</h5>
-                          <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"  data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div> -->
+
+
 
                 <!-- Project Two Row-->
-                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id = "results">
                     <!-- <div class="col-lg-6">
                         <img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
                     <div class="col-lg-6"> -->
@@ -223,16 +316,22 @@
             </div>
         </section> -->
         <!-- Contact-->
-        <!-- <section class="contact-section bg-black">
+        <section class="contact-section bg-black" id = "contact">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 mb-3 mb-md-0">
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
+                                <i class="fab fa-github text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Githubs</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                                <div class="small text-black-50">
+                                    <a href="https://github.com/eric-h-kang"> Eric Kang </a>
+                                    <br>
+                                    <a href="https://github.com/elizabethmkim"> Elizabeth Kim </a>
+                                    <br>
+                                    <a href="https://github.com/pratsjuneja"> Pratyush Juneja</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -240,9 +339,16 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
+                                <h4 class="text-uppercase m-0">Emails</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                                <div class="small text-black-50">
+                                    <p>ekang@ucsd.edu</a>
+                            
+                                    <p>mek017@ucsd.edu</a>
+                  
+                                    <p>pjuneja@ucsd.edu</a>
+                         
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -250,27 +356,29 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <h4 class="text-uppercase m-0">Thank you</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">+1 (555) 902-8832</div>
+                                <div class="small text-black-50">Thank you</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center">
+                <!-- <div class="social d-flex justify-content-center">
                     <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     <a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
-                </div>
+                </div> -->
             </div>
-        </section> -->
+        </section>
         <!-- Footer-->
-        <!-- <footer class="footer bg-black small text-center text-white-50"><div class="container">Copyright © Your Website 2020</div></footer> -->
-        <!-- Bootstrap core JS-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container"></div></footer>
+        <!-- Bootstrap core JS -->
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
         <script src="scripts.js"></script>
     </body>

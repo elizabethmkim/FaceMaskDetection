@@ -48,6 +48,8 @@
   box-sizing: border-box;
 }
 
+
+
 #cgraph{
   padding: 2em; 
   width: 40%;
@@ -60,6 +62,26 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+#ccpointer {
+  position: auto;
+  margin: 0 auto;
+  width: 10%;
+  height: 2em;
+  display: inline-block;
+
+}
+
+#cchome{
+  justify-content: center;
+  text-align: center;
+}
+
+#ccdiv{
+  justify-content: center;
+  text-align: center;
+  position: auto;
+  margin: auto;
+}
 
 
 .quote {
@@ -10364,3 +10386,4 @@ body {
 .footer {
   padding: 5rem 0;
 }
+

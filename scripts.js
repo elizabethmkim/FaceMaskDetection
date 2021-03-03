@@ -3,11 +3,15 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-grayscale/blob/master/LICENSE)
     */
+
+
+    
     (function ($) {
     "use strict"; // Start of use strict
 
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if( $(this).attr("href")=="#myCarousel") return;
         if (
             location.pathname.replace(/^\//, "") ==
                 this.pathname.replace(/^\//, "") &&
@@ -40,6 +44,8 @@
         target: "#mainNav",
         offset: 100,
     });
+
+
 
     // Collapse Navbar
     var navbarCollapse = function () {
