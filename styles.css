@@ -48,6 +48,65 @@
   box-sizing: border-box;
 }
 
+#randombut{
+  float: right;
+  margin-right: 15%;
+}
+
+#uploadbutton{
+  width: 60%;
+  float: right;
+}
+
+#uploadbut{
+  float: middle;
+  margin-left: 10%;
+  margin-right: 3%;
+
+}
+
+#uploadbut2{
+  float: right;
+  margin-right: 15%;
+  margin-left: 3%;
+
+
+}
+
+#demo{
+  text-align: left;
+  margin-top: 15%;
+  margin-left: 15%;
+  margin-right: 50%;
+}
+
+#second{
+  text-align: left;
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 50%;
+}
+
+#demorand{
+  float: middle;
+  margin-left: 10%;
+  margin-right: 3%;
+
+  
+}
+
+#demoupload{
+  float: right;
+  margin-right: 15%;
+  margin-left: 3%;
+
+  
+}
+#buttons{
+  width: 60%;
+  float: right;
+
+}
 
 
 #cgraph{
