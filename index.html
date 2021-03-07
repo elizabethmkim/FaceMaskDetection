@@ -78,7 +78,7 @@
                     
                     <h2> BlackBox Models</h2>
                     <br>
-                    <p class="text-black-50"> Black box models, or models which can be viewed in terms of its <a href = "https://www.investopedia.com/terms/b/blackbox.asp" > "inputs and outputs, without any knowledge of its internal workings”</a>“have advanced in popularity. Initially, black box models proved effective, as they stemmed from the historical use of machine learning in society which did not necessarily deep impact human lives. However, as artificial intelligence and machine learning become more powerful, models must maintain a high level of performance whilst enabling human users to <a href = "https://www.darpa.mil/program/explainable-artificial-intelligence"> “understand, appropriately trust, and efficiently manage the emerging generation of artificially intelligent partners.”  </a> 
+                    <p class="text-black-50"> Black box models, or models which can be viewed in terms of its <a target="_blank" rel="noopener noreferrer" href = "https://www.investopedia.com/terms/b/blackbox.asp" > "inputs and outputs, without any knowledge of its internal workings”</a>“have advanced in popularity. Initially, black box models proved effective, as they stemmed from the historical use of machine learning in society which did not necessarily deep impact human lives. However, as artificial intelligence and machine learning become more powerful, models must maintain a high level of performance whilst enabling human users to <a href = "https://www.darpa.mil/program/explainable-artificial-intelligence"> “understand, appropriately trust, and efficiently manage the emerging generation of artificially intelligent partners.”  </a> 
                     However, especially as it comes to high stakes situations in which trust and transparency is necessary, explainable artificial intelligence is necessary - we aim to provide this transparency and stray away from black box models. </p>
                     <br> 
                     
@@ -126,24 +126,24 @@
                             <h2>Our Approach</h2>
                             <br> 
                             <h3> The Dataset</h3>
-                            <p class="text-black-50 mb-0"> A subsection of the MaskedFace-Net dataset was utilized in order to train our model. The dataset was created from the Flickr-Face-HQ dataset, and 
+                            <p class="text-black-50 mb-0"> A <a target="_blank" rel="noopener noreferrer" href = "https://www.kaggle.com/sheldonsebastian/maskednet-flicker-faces"> subsection </a> of the <a target="_blank" rel="noopener noreferrer" href = "https://github.com/cabani/MaskedFace-Net">  MaskedFace-Net </a> dataset was utilized in order to train our model. The dataset was created from the Flickr-Face-HQ dataset, and 
                                 has a medical blue face mask photoshopped onto various individuals, making it an artificially created dataset.  The dataset itself is a cumulation
                                 of 58,582 images of properly masked faces, improperly masked faces, and unmasked faces. Of the improperly masked faces, they are further split into three categories: 
                                 masks where the Mouth and Chin were covered properly, the Nose and Mouth were covered properly, and only the chin was covered properly. For a face mask 
                                 to be considered properly worn, the mask must cover the nose, chin, and mouth.
 
-                                More information on the dataset is available here. </p>
+                                More information on the dataset is available in our report. </p>
                             <br> 
                             <h3> The Model </h3>
-                            <p class="text-black-50 mb-0"> The model architecture used was the Inception Resnet V1, which ia a variance of the original FaceNet Model. We utilized an untrained model on three classes" improperly
+                            <p class="text-black-50 mb-0"> The model architecture used was the <a target="_blank" rel="noopener noreferrer" href = "https://arxiv.org/pdf/1409.4842v1.pdf" > Inception Resnet V1 </a>, which ia a variance of the original FaceNet Model. We utilized an untrained model on three classes: "improperly
                                 worn, properly worn, and no mask at all. In terms of image processing, the images were resized to 256 x 256, and transformed into tensors; Inception ResNet V1 works best 
                                 with images that are cropped to the face; as our dataset had a pre-cropped image of faces already, this did not prove to be an issue. However, the model performance may change due to this. More information 
                                 on this can be found in our discussion section below. 
-                                Ultimately, our model received an accuracy of 0.96. 
+                                
                             </p>
                             <br> 
                             <h3> GradCAM </h3>
-                            <p class="text-black-50 mb-0"> GradCAM, or Gradient weighted Class Activation Mapping was utilized in order to provide transparency. GradCam utilizes gradient information from the last convolutional layer of our CNN and ultimately results in a coarse heat map. 
+                            <p class="text-black-50 mb-0"> <a target="_blank" rel="noopener noreferrer" href = "https://arxiv.org/abs/1610.02391" >GradCAM  </a>, or Gradient weighted Class Activation Mapping was utilized in order to provide transparency. GradCam utilizes gradient information from the last convolutional layer of our CNN and ultimately results in a coarse heat map. 
                                 Essentially, GradCAM provides insight on where our model is looking specifically to make the decisions that is makes. Sample images of GradCAM outputs on several of the dataset images are shown below. 
                                 
                             </p>
@@ -290,7 +290,20 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h2 class="text-white">Our Results and Discussion</h2>
-                                    <p class="mb-0 text-white-50">  As of early February, Coronavirus (known as Covid-19) has infected over 100 million individuals throughout the world, and has killed over 2.5 million, nearly 500,000 of those being Americans. According to the CDC, Covid-19 spreads most commonly through close contact, primarily when individuals with COVID-19 “cough, sneeze, sing, talk, or breathe” as the virus is transmitted through respiratory droplets. Moreover, these viruses may infect others not in close contact through airborne transmission.  According to John Brooks, a medical epidemiologist at the CDC in Atlanta, “masks bring down the community viral load and are used to protect others, rather than oneself. Masks are imperative to helping prevent the spread of coronavirus; however, they must also be worn properly. </p>
+                                    <p class="mb-0 text-white-50"> 
+                                        The result of our model was an accuracy of 96% in being able to classify between the three classes: improper face mask usage, no mask, and proper face mask usage. 
+                                        In terms of Grad-CAM, the implementation was successful in building trust and transparency within our model: based on the image outputs, we can say with confidence that the model was looking at the correct areas to determine the face mask usage. 
+                                        However, there were several weaknesses in our model. To begin with: the dataset only contains blue medical face masks - it does not contain cloth masks, KN95, or N-95 masks, which are also commonly used mask types during the Covid-19 pandemic; therefore, we are not sure how our model may perform given another face mask. 
+                                        Moreover, some face masks are less effective than others, such as a cloth mask, which is more generally available to the public but less effective, versus an N-95 mask, which is less available to the public but more effective as a protectant. 
+                                        However, some of these weaknesses can be attributed to the lack of datasets available on face masks - there are several datasets with face masks as real images; however, many did not include improper face mask usage (only mask or no mask). 
+                                        Furthermore, the dataset consisted of photoshopped face masks on already cropped faces: ultimately, this is an artificially made dataset. Another weakness would be the accuracy of 96\%; although it is fairly high, considering the high stakes situation, having 4\% inaccurate classifications could have detrimental effects (such as if someone who was Covid-19 positive did not wear a mask properly, and it was deemed proper usage by our model). 
+                                        Finally, due to computational and time constraints, we were not able to implement our model in real time, which would be necessary if one were to use our model to scale it for a business or school. However, regardless of various weaknesses, we were able to complete our goal of having a model that users could trust. 
+                                        Further detail of the dataset and methodology can be found in our report, and Github links, which can be found below.
+
+
+                                    
+                                    
+                                    </p>
                                    
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
@@ -326,11 +339,11 @@
                                 <h4 class="text-uppercase m-0">Githubs</h4>
                                 <hr class="my-4" />
                                 <div class="small text-black-50">
-                                    <a href="https://github.com/eric-h-kang"> Eric Kang </a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/eric-h-kang"> Eric Kang </a>
                                     <br>
-                                    <a href="https://github.com/elizabethmkim"> Elizabeth Kim </a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/elizabethmkim"> Elizabeth Kim </a>
                                     <br>
-                                    <a href="https://github.com/pratsjuneja"> Pratyush Juneja</a>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/pratsjuneja"> Pratyush Juneja</a>
                                 </div>
                             </div>
                         </div>
@@ -343,9 +356,10 @@
                                 <hr class="my-4" />
                                 <div class="small text-black-50">
                                     <a href="mailto:ekang@ucsd.edu"> ekang@ucsd.edu </a>
+                                    <br>
                             
                                     <a href="mailto:mek017@ucsd.edu"> mek017@ucsd.edu </a>
-                  
+                                    <br>
                                     <a href="mailto:pjuneja@ucsd.edu"> pjuneja@ucsd.edu </a>
                          
                                 </div>
@@ -356,9 +370,17 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Thank you</h4>
+                                <h4 class="text-uppercase m-0">Thank you!</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">Thank you</div>
+                                <div class="small text-black-50">
+                                    <a target="_blank" rel="noopener noreferrer" href = "https://github.com/elizabethmkim/FaceMaskDetection"> Github for Static Website</a>
+                                    <br>
+                                    <a target="_blank" rel="noopener noreferrer" href = "https://github.com/eric-h-kang/FaceMaskDetection"> Github for Project </a>
+                                    <br>
+                                    <p> Presentation </p>
+                                    <p> Report </p>
+
+                                </div>
                             </div>
                         </div>
                     </div>
