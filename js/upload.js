@@ -141,5 +141,5 @@ function choosefinal(){
 
 
   typeWriter();
-  setTimeout("typeWriter2()", 60)
-  setTimeout("typeWriter3()", 150)
+  setTimeout("typeWriter2()", 6000)
+  setTimeout("typeWriter3()", 15000)
