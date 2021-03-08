@@ -23,8 +23,8 @@ var randomtxt = "Oh you want to look at a random image? Okay let me look in my v
 var randomimg = "Okay... Cool... Finding you an Image...Putting it through our model... This might take a bit ... Just sit tight... Don't leave me... While we wait, how about a joke? What did the artificial intelligence say to the other artificial intelligence? I'll tell you - Oh would you look at that! Your images are ready."
 var rresults = "I determined... drumroll please... that you are NOT the father! Just kidding. I believe that the first image has a properly covered face. The next two images are my GradCAM outputs, which tells you where I looked to come to this decision. How'd I do?"
 var rresults2 = "I determined... drumroll please... that you are NOT the father! Just kidding. I believe that the first images has only a covered chin but uncovered nose and mouth. It is improper face mask usage. The next two images are my GradCAM outputs, which tells you where I looked to come to this decision. How'd I do?"
-var goodtext = "Whew! Glad to hear it. Next step: take over the human race.                                                                                                             "
-var badtext = "Hmm... interesting. We're still working out some of the kinks in our model. It looks like we ran into one of them. I'll be sure to log this so I can look into it later!"
+var goodtext = "Whew! Glad to hear it. Next step: take over the human race. If you want me to try again, just refresh the page!                                                                                                            "
+var badtext = "Hmm... interesting. We're still working out some of the kinks in our model. It looks like we ran into one of them. I'll be sure to log this so I can look into it later! If you want me to try again, just refresh the page! "
 
 function typeWriter() {
     
