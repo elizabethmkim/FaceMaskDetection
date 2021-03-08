@@ -32,7 +32,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#context">Background</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#approach">Our Approach</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#results">Results and Discussion</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#rrand">Results and Discussion</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
@@ -132,10 +132,21 @@
                                 masks where the Mouth and Chin were covered properly, the Nose and Mouth were covered properly, and only the chin was covered properly. For a face mask 
                                 to be considered properly worn, the mask must cover the nose, chin, and mouth.
 
-                                More information on the dataset is available here. </p>
+                                </p>
+
+                            <div id = "eda"> 
+                            
+                                    <img id = 'edahist' src="img/mask usage count.png" alt="figure of mask usage" style="width:50%">
+                                    <p> A histogram of the count of correctly worn masks, incorrectly worn masks, and no mask split via training, validation, and test set.</p>
+                              
+                             
+                                    <img id = 'edahist'  src="img/incorrectusage.png" alt="figure of improper usage" style="width:50%">
+                                    <p> A histogram of the count of incorrectly worn masks and why; Mouth/Chin means the mouth and chin were covered, but nose was not. Likewise for remainder of categories. </p>
+                                
+                            </div>
                             <br> 
                             <h3> The Model </h3>
-                            <p class="text-black-50 mb-0"> The model architecture used was the Inception Resnet V1, which ia a variance of the original FaceNet Model. We utilized an untrained model on three classes" improperly
+                            <p class="text-black-50 mb-0"> The model architecture used was the Inception Resnet V1, which is a variance of the original FaceNet Model. We utilized an untrained model on three classes" improperly
                                 worn, properly worn, and no mask at all. In terms of image processing, the images were resized to 256 x 256, and transformed into tensors; Inception ResNet V1 works best 
                                 with images that are cropped to the face; as our dataset had a pre-cropped image of faces already, this did not prove to be an issue. However, the model performance may change due to this. More information 
                                 on this can be found in our discussion section below. 
@@ -282,7 +293,7 @@
 
 
                 <!-- Project Two Row-->
-                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id = "results">
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0" id = "randd">
                     <!-- <div class="col-lg-6">
                         <img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="" /></div>
                     <div class="col-lg-6"> -->
@@ -343,9 +354,9 @@
                                 <hr class="my-4" />
                                 <div class="small text-black-50">
                                     <a href="mailto:ekang@ucsd.edu"> ekang@ucsd.edu </a>
-                            
+                                    <br>
                                     <a href="mailto:mek017@ucsd.edu"> mek017@ucsd.edu </a>
-                  
+                                    <br>
                                     <a href="mailto:pjuneja@ucsd.edu"> pjuneja@ucsd.edu </a>
                          
                                 </div>
@@ -356,10 +367,16 @@
                         <div class="card py-4 h-100">
                             <div class="card-body text-center">
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Thank you</h4>
+                                <h4 class="text-uppercase m-0">Links</h4>
                                 <hr class="my-4" />
-                                <div class="small text-black-50">Thank you</div>
-                            </div>
+                                <div class="small text-black-50">
+                                <a href="https://github.com/eric-h-kang/FaceMaskDetection"> Project Repo </a>
+                                    <br>
+                                    <a href="https://github.com/elizabethmkim/FaceMaskDetection"> Visual Presentation Repo </a>
+                                    <br>
+                                    <a href="https://drive.google.com/file/d/18z3urXH0xqTZLLoMXowVs77Zo86KWex7/view?usp=sharing"> Report </a>
+                                </div>
+                                </div>
                         </div>
                     </div>
                 </div>
