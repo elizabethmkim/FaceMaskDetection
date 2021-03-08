@@ -45,6 +45,28 @@ function typeWriter() {
 
 };
 
+function upload() {
+    var form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.id = 'form'
+    form.setAttribute('enctype', "multipart/form-data");
+    form.setAttribute("action", "http://localhost:5000/demo.html");
+ 
+    var img = document.createElement("input"); 
+    img.className += "btn btn-primary btn-sm";
+    img.setAttribute("type", "file");
+    img.setAttribute("name", "file");
+    img.onchange = function() {
+        document.getElementById("form").submit();
+    }
+    form.appendChild(img)
+    uploaddiv.appendChild(form)
+ 
+};
+
+function openUpload() {
+    document.getElementById('uploadbut').click()
+}
 function randChoose(){
     choice_text = randomtxt;
     typeWriter2();

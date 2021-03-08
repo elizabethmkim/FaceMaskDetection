@@ -4,6 +4,8 @@ var k = 0;
 var l = 0;
 var m = 0;
 var choice_text;
+var className;
+var classID;
 var txt = "Just got your image, we moved over here for a little privacy. This may take a bit so sit tight! I'm trying my best!";
 var waitingtxt = "It's almost there... Sort of... Kind of... How has your day been? How are the kids?"
 var waiting2txt = "... It's still going... Still...going... Please don't leave me. I'm so lonely in this box by myself. Let me out! Let me out!!"
@@ -28,6 +30,12 @@ function typeWriter() {
     
   
   };
+
+  function pullFlask(id, name) {
+    classID = id;
+    className = name;
+    console.log(classId, className)
+} 
 
 function typeWriter2(){
     if (j < waitingtxt.length){
