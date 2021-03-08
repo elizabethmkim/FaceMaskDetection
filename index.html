@@ -197,10 +197,10 @@
                     <div class="col-md-4" style="float:left">
                      <div class="card mb-2">
                         <img class="card-img-top"
-                          src="img/download-1.png" alt="Chin covered">
+                          src="img/covered3.png" alt="Chin covered">
                         <div class="card-body">
                           <h4 class="card-title">Original Photo</h4>
-                          <p class="card-text"> Improper mask usage - only their chin is covered in the image.</p>
+                          <p class="card-text"> Proper mask usage - the chin, nose, and mouth are covered.</p>
                           <!-- <a class="btn btn-primary">Button</a> -->
                         </div>
                       </div>
@@ -209,7 +209,7 @@
                     <div class="col-md-4" style="float:left">
                         <div class="card mb-2">
                           <img class="card-img-top"
-                            src="img/chingrad2.jpg" alt="Card image cap">
+                            src="img/coveredface2.jpg" alt="Card image cap">
                           <div class="card-body">
                             <h4 class="card-title">GradCAM Output</h4>
                             <p class="card-text"> GradCAM output - where was our model looking to reach a conclusion?</p>
@@ -221,7 +221,7 @@
                     <div class="col-md-4" style="float:left">
                       <div class="card mb-2">
                         <img class="card-img-top"
-                          src="img/chingrad1.jpg" alt="Card image cap">
+                          src="img/coveredface.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title">Final HeatMap</h4>
                           <p class="card-text"> The GradCAM output as a heatmap, overlayed onto the original photo.</p>
@@ -243,10 +243,10 @@
                     <div class="col-md-4" style="float:left">
                       <div class="card mb-2">
                         <img class="card-img-top"
-                          src="img/download.png" alt="Card image cap">
+                          src="img/uncoverednose3.png" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title">Original Photo</h4>
-                          <p class="card-text"> Proper Mask Usage - the chin, nose, and mouth are covered.</p>
+                          <p class="card-text"> Improper Mask Usage - the nose is exposed.</p>
                           <!-- <a class="btn btn-primary">Button</a> -->
                         </div>
                       </div>
@@ -255,7 +255,7 @@
                     <div class="col-md-4" style="float:left">
                       <div class="card mb-2">
                         <img class="card-img-top"
-                          src="img/covered2.jpg" alt="Card image cap">
+                          src="img/uncoverednose2.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title">GradCam Output</h4>
                           <p class="card-text"> GradCAM output - where was our model looking to reach a conclusion?</p>
@@ -267,7 +267,7 @@
                     <div class="col-md-4" style="float:left">
                       <div class="card mb-2">
                         <img class="card-img-top"
-                          src="img/covered1.jpg" alt="Card image cap">
+                          src="img/uncoverednose.jpg" alt="Card image cap">
                         <div class="card-body">
                           <h4 class="card-title"> Final Heatmap </h4>
                           <p class="card-text">The GradCAM output as a heatmap, overlayed onto the original photo.</p>
@@ -301,7 +301,14 @@
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
                                     <h2 class="text-white">Our Results and Discussion</h2>
-                                    <p class="mb-0 text-white-50">  As of early February, Coronavirus (known as Covid-19) has infected over 100 million individuals throughout the world, and has killed over 2.5 million, nearly 500,000 of those being Americans. According to the CDC, Covid-19 spreads most commonly through close contact, primarily when individuals with COVID-19 “cough, sneeze, sing, talk, or breathe” as the virus is transmitted through respiratory droplets. Moreover, these viruses may infect others not in close contact through airborne transmission.  According to John Brooks, a medical epidemiologist at the CDC in Atlanta, “masks bring down the community viral load and are used to protect others, rather than oneself. Masks are imperative to helping prevent the spread of coronavirus; however, they must also be worn properly. </p>
+                                    <p class="mb-0 text-white-50">  Overall, our model was fairly successful as we were able to reach 96% accuracy. However, there were several weaknesses in our model. 
+                                        To begin with: the dataset only contains blue medical face masks - it does not contain cloth masks, KN95, or N-95 masks, which are also commonly used in the Covid-19 pandemic; therefore, we are not sure how our model may perform given another face mask. This weakness can be attributed to the lack of datasets available on face masks - 
+                                        although there are several datasets with a variety of face masks in various settings, many did not include improper face mask usage  and only had the two categories:  mask or no mask. Furthermore, the dataset consisted of photoshopped face masks on cropped faces: ultimately, this is an artificially made dataset.
+                                        Individuals who wear masks most likely do not do so in an manner as perfectly as a mask photoshopped onto an individual, nor will images be perfectly cropped to the face as this dataset was.
+                                        Another weakness would be the accuracy of 96\%; although it is fairly high, considering the high stakes situation, having 4\% inaccurate classifications could have detrimental effects (such as if someone who was Covid-19 positive did not wear a mask properly, and it was deemed proper usage by our model). 
+                                        Finally, due to computational and time constraints, we were not able to implement our model in real time, which would be necessary if one were to use our model to scale it for a business or school. However, regardless of various weaknesses, we were able to complete our goal of having a model that users could trust, especially after a successful GradCAM implementation. 
+                              
+                                     </p>
                                    
                                     <hr class="d-none d-lg-block mb-0 ml-0" />
                                 </div>
