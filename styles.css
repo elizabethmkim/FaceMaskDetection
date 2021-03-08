@@ -58,6 +58,16 @@
   float: right;
 }
 
+#badbut{
+  float: right;
+  margin-right: 10%;
+}
+
+#goodbut{
+  float: right;
+  margin-right: 10%;
+}
+
 #uploadbut{
   float: middle;
   margin-left: 10%;
@@ -85,6 +95,29 @@
   margin-top: 10%;
   margin-left: 15%;
   margin-right: 50%;
+}
+
+#ritext, #results, #final {
+  text-align: left;
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 50%;
+
+}
+
+.demoimg{
+  width: 20%;
+  height: auto;
+  margin-top: 10%;
+  margin-left: 10%;
+  display: inline-block;
+
+}
+#threeimages{
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 #demorand{
