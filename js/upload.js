@@ -6,6 +6,7 @@ var m = 0;
 var choice_text;
 var className;
 var classID;
+var originalName;
 var txt = "Just got your image, we moved over here for a little privacy. This may take a bit so sit tight! I'm trying my best!";
 var waitingtxt = "It's almost there... Sort of... Kind of... How has your day been? How are the kids?"
 var waiting2txt = "... It's still going... Still...going... Please don't leave me. I'm so lonely in this box by myself. Let me out! Let me out!!"
@@ -79,9 +80,9 @@ function showImages(){
     
     
         
-    img.src = "img/download-1.png";
-    img1.src = "img/chingrad1.jpg";
-    img2.src = "img/chingrad2.jpg";
+    img.src = "/gc/" + originalName;
+    img1.src = "/gc/" + 'cam.jpg';
+    img2.src = "/gc/" + 'cam_gb.jpg';
 
 
     img.className += "demoimg1"
@@ -99,7 +100,7 @@ function showImages(){
 
 function typeWriter4() {
     if (l < choice_text.length) {
-        console.log("hihi")
+  
         document.getElementById("results").innerHTML += choice_text.charAt(l);
         l++;
         setTimeout(typeWriter4, speed);
@@ -110,7 +111,7 @@ function typeWriter4() {
         
     }
 function choosefinal(){
-        console.log("final")
+
 
         var btn = document.createElement("BUTTON");
         var btn2 = document.createElement('BUTTON');
