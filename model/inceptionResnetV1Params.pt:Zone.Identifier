@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=http://dsmlp-login.ucsd.edu:13768/tree/FaceMaskDetection/Config
+HostUrl=http://dsmlp-login.ucsd.edu:13768/files/FaceMaskDetection/Config/inceptionResnetV1Params.pt?download=1
