@@ -6,7 +6,7 @@ var l = 0;
 var m = 0;
 var choice_text;
 var txt = "Hey there! Welcome to our demo. Just a heads up - this webpage was created for a full screen desktop. My name is mark.ai, and I'm going to take you through our model. If you want, I'll even check if you're wearing your mask properly. Which would you prefer?";
-var speed = 3;
+var speed = 30;
 var buttondiv = document.getElementById("buttons")
 var uploaddiv = document.getElementById("uploadbutton")
 var imagediv = document.getElementById("threeimages")
