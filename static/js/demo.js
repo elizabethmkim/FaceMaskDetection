@@ -218,9 +218,9 @@ function showImages(){
     console.log(randomizer)
     if (randomizer == "false"){
         console.log("falsetripped")
-        img.src = "/static/img/download-1.png"; 
-        img1.src = "/static/img/chingrad1.jpg";
-        img2.src = "/static/img/chingrad2.jpg";
+        img.src = "../static/img/download-1.png"; 
+        img1.src = "../static/img/chingrad1.jpg";
+        img2.src = "../static/img/chingrad2.jpg";
         randomizer = "true";
         localStorage.setItem("randomizer", JSON.stringify(randomizer))
         console.log(randomizer)
@@ -230,9 +230,9 @@ function showImages(){
     }
     else {
         console.log("truetripped")
-        img.src = "/static/img/download.png"; 
-        img1.src = "/static/img/covered1.jpg";
-        img2.src = "/static/img/covered2.jpg";
+        img.src = "../static/img/download.png"; 
+        img1.src = "../static/img/covered1.jpg";
+        img2.src = "../static/img/covered2.jpg";
         randomizer = "false";
         localStorage.setItem("randomizer", JSON.stringify(randomizer))
         console.log(randomizer)
